@@ -1,0 +1,320 @@
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.entero {
+    background-color: #f9f9f9;
+}
+
+.entero1 {
+    background: url(../img/foto18.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.registro {
+    margin-left: auto;
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.registro:hover {
+    color: #3b3b3b;
+}
+
+.card-body .btn{
+    margin-left: 36%;
+}
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus-visible,
+.btn-primary:active:focus {
+  background-color: #ffb347 !important;
+  border-color: #ffb347 !important;
+  color: #333 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-primary:hover {
+    background-color: #f1b054 !important;
+    border-color: #f8af49 !important;
+    color: #333;
+}
+
+.card-shop .btn:hover {
+    background-color: #f8af49;
+    border-color: #f8af49;
+    color: #333;
+}
+
+.card-shop .btn {
+    background-color: #ffb347;
+    border-color: #ffb347;
+    color: #333;
+}
+
+.card-body .btn:hover {
+    background-color: #f8af49;
+    border-color: #f8af49;
+    color: #333;
+}
+.card img {
+    height: 300px;
+}
+
+.container1 {
+    margin-top: -2%;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.custom-header {
+  background-color: #ffb347 !important;
+}
+
+.custom-header1 {
+    background-color: #ffb347 !important;
+}
+
+.card.card-dog {
+  background-color: #f7f4f4ec !important; 
+  color: #333 !important; 
+  border-color: #ccc;
+}
+
+.container h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+}
+
+.paginas .page-link {
+    color: #333; 
+    background-color: #ffff; 
+    border: 1px solid #ccc; 
+}
+
+.paginas .page-link:hover {
+    color: #333;
+    background-color: #cecbcb;
+    border-color: #ccc;
+}
+
+#offcanvasNavbar {
+    background-color: #fdfdfd; 
+    color: #333;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.sign-up {
+    background: linear-gradient(135deg, #ffb347, rgba(255, 179, 71, 0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    align-items: flex-start;
+    padding-top: -30px; /* súbele más aquí */
+}
+
+
+
+
+.form-control {
+    margin-top: -9px;
+    margin-bottom: -12px;
+}
+
+.sol {
+    margin-top: -6px;
+    margin-bottom: -9px;
+}
+
+.form-label {
+    color: #757171;
+}
+
+.form-container-login .btn {
+    margin-top: -3px;
+}
+
+#logoform {
+    width: 80px;
+    height: 80px;
+    margin-top: -18px;
+    margin-bottom: 1px !important;
+}
+
+.form-card {
+    max-width: 500px; 
+  width: 100%;
+  margin-top: -40px !important;
+  border-radius: 20px;
+  background-color: #fff;
+  height: 70%;
+  
+}
+
+.form-card1 {
+    max-width: 500px; 
+  width: 100%;
+  margin-top: 25px !important;
+  border-radius: 20px;
+  background-color: #fff;
+  padding-top: 100px !important;
+  height: 530px !important;
+  
+}
+
+.form-card2 {
+    max-width: 500px; 
+  width: 100%;
+  margin-top: 5px !important;
+  border-radius: 20px;
+  background-color: #fff;
+  padding-top: 100px !important;
+  height: 60% !important;
+}
+
+.con {
+    margin-top: -3px;
+    margin-bottom: -6px;
+}
+
+.btn-registro {
+    background-color: #ffb347 !important;
+    border-color: #ffb347 !important;
+    color: #333 !important;
+    
+    margin-top: 10px !important;
+}
+
+.btn-registro:hover {
+    background-color: #f8af49 !important;
+    border-color: #f8af49 !important;
+    color: #333 !important;
+}
+
+.recordar {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.recordar:hover {
+    color: #333;
+}
+
+.recorda {
+    margin-top: 15px;
+}
+
+.conto {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.regis {
+    margin-top: 10px;
+}
+
+.contas {
+    margin-top: 8% !important;
+}
+
+.contas1 {
+    margin-top: 15% !important;
+}
+
+.custom {
+    background: transparent !important;
+    backdrop-filter: blur(4px) !important;
+    border: 1px solid #ccc !important;
+    transition: all 0.3s ease-in-out !important;
+    font-family: 'Segoe UI', Roboto, sans-serif !important;    
+    position: static !important;
+}
+
+.custom:hover {
+    transform: translateY(-5px) !important;
+
+}
+
+.texxt {
+    color: #f9f9f9 !important;
+}
+
+.color {
+    color: #f9f9f9 !important;
+}
+
+.texto-custom h4 {
+    font-size: 22px !important;
+}
+
+.tablas {
+    margin-top: 30px !important;
+}
+
+.btn-back {
+    margin-left: 3%;
+    margin-top: -8%;
+}
+
+.btn-back1 {
+    margin-left: 4%;
+    margin-top: -14%;
+}
+
+.btn-largo {
+    margin-top: 2% !important;
+}
+
+.btn-largo1 {
+    margin-top: 4% !important;
+}
+
+.amarillo {
+    background-color: #ffb347 !important;
+}
+
+.btn-back2 {
+    margin-left: 1%;
+    margin-top: -43%;
+}
+
+.btn-back3 {
+    margin-left: 1%;
+    margin-top: -22%;
+}
+
+.btn-back4 {
+    margin-left: 1%;
+    margin-top: -65%;
+}
+
+.btn-pro {
+    margin-top: -1% !important;
+}
+
+.btn-back5 {
+    margin-left: 1%;
+    margin-top: -37%;
+}
+
+.btn-back6 {
+    margin-left: 1% !important;
+    margin-top: -14% !important;
+}
+
+.text-center {
+    font-weight: 600;
+}
