@@ -12,8 +12,8 @@ session_start();
 
     $sql = $con->prepare("SELECT articulo.*, tip_art.tipo_articulo, user.user FROM articulo 
     INNER JOIN tip_art ON articulo.id_tipo_articulo = tip_art.id_tipo_articulo 
-    INNER JOIN user ON articulo.id_documento = user.id_documento
-    WHERE articulo.id_documento = '" . $_GET['doc'] . "'");
+    INNER JOIN user ON articulo.doc_vendedor = user.id_documento
+    WHERE articulo.doc_vendedor = '" . $_GET['doc'] . "'");
 
     $sql->execute();
     $articulos = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -41,6 +41,7 @@ session_start();
         <nav class="navbar custom-header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../index.php">Huellas Store</a>
+                <button name="cerrar" class="btn btn-outline-dark" onclick="window.history.back()"><strong>Volver</strong></button>
             </div>
         </nav>
     </header>
@@ -92,8 +93,5 @@ session_start();
             </div>
         </div>
     </div>
-    <button class="btn btn-outline-secondary btn-back5" onclick="window.history.back()">
-        <i class="bi bi-arrow-left"></i> Volver
-    </button>
 </body>
 </html>

@@ -30,7 +30,7 @@ session_start();
 
         else {
 
-            $insertSQL = $con-> prepare("INSERT INTO articulo(nombre_art, precio, descripcion, imagen, id_tipo_articulo, id_documento)
+            $insertSQL = $con-> prepare("INSERT INTO articulo(nombre_art, precio, descripcion, imagen, id_tipo_articulo, doc_vendedor)
             VALUES ('$nombre', '$precio', '$descrip', '$imagen', '$tipo_articulo', '$tipo_user')");
             $insertSQL -> execute();
             echo '<script>alert("Se Inserto El Registro Exitosamente");</script>';

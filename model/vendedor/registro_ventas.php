@@ -13,8 +13,8 @@ session_start();
     $sql = $con->prepare(" SELECT venta.id_venta, venta.fecha_venta, user.user AS user, detalle_venta_art.id_detalle, detalle_venta_art.cantidad, articulo.precio, articulo.nombre_art, detalle_venta_art.sub_total, articulo.id_articulo FROM detalle_venta_art
     INNER JOIN venta ON detalle_venta_art.id_venta = venta.id_venta
     INNER JOIN articulo ON detalle_venta_art.id_articulo = articulo.id_articulo
-    INNER JOIN user ON venta.id_documento = user.id_documento
-    WHERE articulo.id_documento = '" . $_GET['doc'] . "'");
+    INNER JOIN user ON venta.doc_cliente = user.id_documento
+    WHERE articulo.doc_vendedor = '" . $_GET['doc'] . "'");
 
     $sql->execute();
     $articulos = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -40,6 +40,7 @@ session_start();
         <nav class="navbar custom-header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../index.php">Huellas Store</a>
+                <button name="cerrar" class="btn btn-outline-dark" onclick="window.history.back()"><strong>Volver</strong></button>
             </div>
         </nav>
     </header>
@@ -74,8 +75,5 @@ session_start();
             </div>
         </div>
     </div>
-    <button class="btn btn-outline-secondary btn-back6" onclick="window.history.back()">
-        <i class="bi bi-arrow-left"></i> Volver
-    </button>
 </body>
 </html>

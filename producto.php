@@ -65,7 +65,7 @@ $con = $db->conectar();
     <header>
         <nav class="navbar custom-header">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.php">Huellas Store</a>
+                <a class="navbar-brand" href="index.php">Huellas Store</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -82,7 +82,7 @@ $con = $db->conectar();
                             </form>
                             <br>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -139,7 +139,7 @@ $con = $db->conectar();
             $con = $db->conectar();
 
 
-            $sql = $con->prepare("SELECT articulo.*, user.user FROM articulo INNER JOIN user ON articulo.id_documento = user.id_documento 
+            $sql = $con->prepare("SELECT articulo.*, user.user FROM articulo INNER JOIN user ON articulo.doc_vendedor = user.id_documento 
             WHERE articulo.id_articulo = '" . $_GET['id'] . "'");
 
             $sql->execute();

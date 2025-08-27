@@ -10,11 +10,11 @@ session_start();
     $sql_user->execute([$doc]);
     $fila = $sql_user->fetch(PDO::FETCH_ASSOC);
 
-    $sql = $con->prepare(" SELECT venta.id_venta, venta.fecha_venta, user.user AS user, detalle_venta_art.id_detalle, detalle_venta_art.cantidad, articulo.precio, articulo.nombre_art, detalle_venta_art.sub_total, articulo.id_articulo, user_vendedor.user AS vendedor FROM detalle_venta_art
+    $sql = $con->prepare(" SELECT venta.id_venta, venta.fecha_venta, user.user AS cliente, detalle_venta_art.id_detalle, detalle_venta_art.cantidad, articulo.precio, articulo.nombre_art, detalle_venta_art.sub_total, articulo.id_articulo, user_vendedor.user AS vendedor FROM detalle_venta_art
     INNER JOIN venta ON detalle_venta_art.id_venta = venta.id_venta
     INNER JOIN articulo ON detalle_venta_art.id_articulo = articulo.id_articulo
-    INNER JOIN user ON venta.id_documento = user.id_documento
-    INNER JOIN user AS user_vendedor ON articulo.id_documento = user_vendedor.id_documento");
+    INNER JOIN user ON venta.doc_cliente = user.id_documento
+    INNER JOIN user AS user_vendedor ON articulo.doc_vendedor = user_vendedor.id_documento");
     $sql->execute();
     $articulos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -40,6 +40,7 @@ session_start();
         <nav class="navbar custom-header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../index.php">Huellas Store</a>
+                <button name="cerrar" class="btn btn-outline-dark" onclick="window.history.back()"><strong>Volver</strong></button>
             </div>
         </nav>
     </header>
@@ -51,31 +52,32 @@ session_start();
                 <table class="table table-striped tablas table-hover table-sm table-striped">
                     <thead class="table-warning">
                         <tr>
+                            <th>ID_Factura</th>
                             <th>Cliente</th>
                             <th>Fecha De Venta</th>
                             <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Precio Unitario</th>
                             <th>Sub Total</th>
+                            <th>Vendedor</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($articulos as $fila): ?>
                         <tr>
-                            <td><strong><?php echo $fila['user']; ?></strong></td>
+                            <td><strong><?php echo $fila['id_detalle']; ?></strong></td>
+                            <td><strong><?php echo $fila['cliente']; ?></strong></td>
                             <td><?php echo $fila['fecha_venta']; ?></td>
                             <td><?php echo $fila['nombre_art']; ?></td>
                             <td><?php echo $fila['cantidad']; ?></td>
                             <td><?php echo "$" . number_format($fila['precio'], 0, ',', ','); ?></td>
                             <td><?php echo "$" . number_format($fila['sub_total'], 0, ',', ','); ?></td>
+                            <td><strong><?php echo $fila['vendedor']; ?></strong></td>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <button class="btn btn-outline-secondary btn-back3" onclick="window.history.back()">
-        <i class="bi bi-arrow-left"></i> Volver
-    </button>
 </body>
 </html>

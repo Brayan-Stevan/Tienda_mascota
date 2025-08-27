@@ -10,7 +10,7 @@ session_start();
     $sql_user->execute([$doc]);
     $fila = $sql_user->fetch(PDO::FETCH_ASSOC);
 
-    $sql = $con->prepare("SELECT * FROM articulo INNER JOIN tip_art ON articulo.id_tipo_articulo = tip_art.id_tipo_articulo INNER JOIN user ON articulo.id_documento = user.id_documento");
+    $sql = $con->prepare("SELECT * FROM articulo INNER JOIN tip_art ON articulo.id_tipo_articulo = tip_art.id_tipo_articulo INNER JOIN user ON articulo.doc_vendedor = user.id_documento");
     $sql->execute();
     $articulos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -36,6 +36,7 @@ session_start();
         <nav class="navbar custom-header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../index.php">Huellas Store</a>
+                <button name="cerrar" class="btn btn-outline-dark" onclick="window.history.back()"><strong>Volver</strong></button>
             </div>
         </nav>
     </header>
@@ -63,7 +64,7 @@ session_start();
                         <tr>
                             <td><?php echo $fila['id_articulo']; ?></td>
                             <td><?php echo $fila['nombre_art']; ?></td>
-                            <td><?php echo $fila['precio']; ?></td>
+                            <td><?php echo "$" . number_format($fila['precio'], 0, ',', ','); ?></td>
                             <td><?php echo $fila['descripcion']; ?></td>
                             <td><?php echo $fila['imagen']; ?></td>
                             <td><?php echo $fila['tipo_articulo']; ?></td>
@@ -89,8 +90,5 @@ session_start();
             </div>
         </div>
     </div>
-    <button class="btn btn-outline-secondary btn-back4" onclick="window.history.back()">
-        <i class="bi bi-arrow-left"></i> Volver
-    </button>
 </body>
 </html>

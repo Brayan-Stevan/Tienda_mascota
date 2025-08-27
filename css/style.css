@@ -286,35 +286,11 @@
     background-color: #ffb347 !important;
 }
 
-.btn-back2 {
-    margin-left: 1%;
-    margin-top: -43%;
-}
-
-.btn-back3 {
-    margin-left: 1%;
-    margin-top: -22%;
-}
-
-.btn-back4 {
-    margin-left: 1%;
-    margin-top: -65%;
-}
-
 .btn-pro {
-    margin-top: -1% !important;
-}
-
-.btn-back5 {
-    margin-left: 1%;
-    margin-top: -37%;
-}
-
-.btn-back6 {
-    margin-left: 1% !important;
-    margin-top: -14% !important;
+    margin-top: -3% !important;
 }
 
 .text-center {
-    font-weight: 600;
+    font-weight: 550;
+    color: #3b3b3b;
 }

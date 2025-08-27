@@ -36,6 +36,7 @@ session_start();
         <nav class="navbar custom-header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Huellas Store</a>
+                <button name="cerrar" class="btn btn-outline-dark" onclick="window.history.back()"><strong>Volver</strong></button>
             </div>
         </nav>
     </header>
@@ -87,8 +88,5 @@ session_start();
             </div>
         </div>
     </div>
-    <button class="btn btn-outline-secondary btn-back2" onclick="window.history.back()">
-        <i class="bi bi-arrow-left"></i> Volver
-    </button>
 </body>
 </html>
