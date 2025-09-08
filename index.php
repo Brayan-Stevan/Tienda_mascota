@@ -183,7 +183,7 @@ if (isset($_POST["inicio"])) {
                 $con = $db->conectar();
 
                 // Traer todos los productos
-                $sql = $con->prepare(" SELECT articulo.*, user.user FROM articulo INNER JOIN user ON articulo.doc_vendedor = user.id_documento");
+                $sql = $con->prepare(" SELECT articulo.*, user.user, tip_art.tipo_articulo FROM articulo INNER JOIN user ON articulo.doc_vendedor = user.id_documento INNER JOIN tip_art ON articulo.id_tipo_articulo = tip_art.id_tipo_articulo");
                 $sql->execute();
                 $productos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
